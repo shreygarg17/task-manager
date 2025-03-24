@@ -1,0 +1,27 @@
+# Go build
+*.exe
+*.out
+*.test
+
+# Build folders
+/bin/
+build/
+dist/
+
+# Logs
+*.log
+
+# IDE/editor
+.vscode/
+.idea/
+*.swp
+
+# System
+.DS_Store
+
+# Env
+.env
+.env.*
+
+# Database data 
+pgdata/
