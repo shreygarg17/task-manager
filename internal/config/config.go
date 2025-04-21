@@ -20,12 +20,12 @@ type Config struct {
 
 func Load() *Config {
 	cfg := &Config{
-		Port:   getEnv("PORT", "8080"),
+		Port:   getEnv("PORT", "8081"),
 		DBHost: getEnv("DB_HOST", "localhost"),
 		DBPort: getEnv("DB_PORT", "5432"),
 		DBUser: getEnv("DB_USER", "tasker"),
 		DBPass: getEnv("DB_PASSWORD", "password"),
-		DBName: getEnv("DB_NAME", "taskerdb"),
+		DBName: getEnv("DB_NAME", "tasker_db"),
 	}
 	log.Println("✅ Config loaded successfully")
 	return cfg

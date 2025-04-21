@@ -1,7 +1,9 @@
 package http
 
 import (
+	"context"
 	"encoding/json"
+	"log"
 	"net/http"
 
 	"github.com/go-chi/chi/v5"
@@ -26,7 +28,13 @@ func SetupRouter(taskService *service.TaskService) http.Handler {
 func GetAllTasks(taskService *service.TaskService) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
 		// TODO: Replace with actual logic
-		json.NewEncoder(w).Encode(map[string]string{"message": "Get all tasks"})
+		ctx := context.Background()
+		resp, err := taskService.GetAllTasks(ctx)
+		log.Print(resp)
+		if err != nil {
+			http.Error(w, err.Error(), http.StatusInternalServerError)
+		}
+		json.NewEncoder(w).Encode(resp)
 	}
 }
 

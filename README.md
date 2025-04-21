@@ -55,7 +55,7 @@ DB_HOST=localhost
 DB_PORT=5432
 DB_USER=tasker
 DB_PASSWORD=password
-DB_NAME=taskerdb
+DB_NAME=tasker_db
 ```
 
 ### 3. Run the application

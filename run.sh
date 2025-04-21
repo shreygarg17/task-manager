@@ -14,7 +14,7 @@ export DB_HOST=localhost
 export DB_PORT=5432
 export DB_USER=tasker
 export DB_PASSWORD=password
-export DB_NAME=taskerdb
+export DB_NAME=tasker_db
 
 echo -e "${GREEN}✅ Environment variables set.${NC}"
 
